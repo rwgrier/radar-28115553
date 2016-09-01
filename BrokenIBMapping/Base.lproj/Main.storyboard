@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BrokenIBMapping" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMX-sW-jfV">
+                                <state key="normal" title="Setup via code"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EY7-x5-Rgg">
+                                <state key="normal" title="Setup via Interface Builder"/>
+                                <connections>
+                                    <action selector="buttonPressViaInterfaceBuilderWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E0R-Bk-KVd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVB-Z5-kvA">
+                                <state key="normal" title="Setup via Interface Builder 2"/>
+                                <connections>
+                                    <action selector="buttonPressViaInterfaceBuilder2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pvo-K8-kKS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SVB-Z5-kvA" firstAttribute="top" secondItem="EY7-x5-Rgg" secondAttribute="bottom" constant="8" id="KzD-DQ-zIN"/>
+                            <constraint firstItem="SVB-Z5-kvA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M0f-rb-MRP"/>
+                            <constraint firstItem="EY7-x5-Rgg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U0j-rs-35R"/>
+                            <constraint firstItem="kMX-sW-jfV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n0K-7d-TL7"/>
+                            <constraint firstItem="EY7-x5-Rgg" firstAttribute="top" secondItem="kMX-sW-jfV" secondAttribute="bottom" constant="8" id="oha-EM-ssg"/>
+                            <constraint firstItem="kMX-sW-jfV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="tDg-Vw-ZcV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codeButton" destination="kMX-sW-jfV" id="fBL-Fc-k4v"/>
+                        <outlet property="ib2Button" destination="SVB-Z5-kvA" id="4GF-iI-QuM"/>
+                        <outlet property="ibButton" destination="EY7-x5-Rgg" id="VbV-uY-AUw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
